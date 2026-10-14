@@ -66,5 +66,5 @@ redeploys automatically. Colors match Ferroll's in-app theme:
 
 ## Updating the contact address
 
-The email `yagjz@icloud.com` appears in `index.html`, `support.html` and
+The Instagram contact `@dev.yagiz` (https://www.instagram.com/dev.yagiz/) appears in `index.html`, `support.html` and
 `privacy.html`. Change it in all three if it ever moves.
