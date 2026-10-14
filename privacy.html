@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ferroll — Privacy Policy</title>
-<meta name="description" content="Privacy Policy for Ferroll, the tilt-controlled maze game for iPhone and iPad.">
+<meta name="description" content="Privacy Policy for Ferroll, the tilt-controlled maze game for iPhone, iPad and Android.">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="stylesheet" href="assets/style.css">
@@ -23,19 +23,19 @@
 
   <section>
     <h2>Privacy Policy</h2>
-    <p class="updated">Last updated: 20 August 2026</p>
+    <p class="updated">Last updated: 14 October 2026</p>
 
     <p>
       This policy explains what happens to your data when you play <strong>Ferroll</strong>
       ("the app"), published by Mustafa Yağız ("we", "us"). It applies to the iOS app distributed
-      on the Apple App Store.
+      on the Apple App Store and to the Android app distributed on Google Play.
     </p>
 
     <div class="callout">
       <p>
         <strong>In short:</strong> we do not run any servers and we do not collect, store or receive
         any personal information about you. Your game progress never leaves your device. The only
-        third parties involved are Apple and Google, described below.
+        third parties involved are Apple (on iOS) and Google, described below.
       </p>
     </div>
   </section>
@@ -43,9 +43,10 @@
   <section>
     <h2>Data stored on your device</h2>
     <p>
-      Your unlocked levels, stars, best times, remaining lives and your sound, music and haptics
-      settings are saved locally on your device using Apple's standard storage. This data is not
-      transmitted anywhere, we cannot read it, and it is deleted when you delete the app.
+      Your unlocked levels, stars, best times, remaining lives, life refill timer and your sound,
+      music and haptics settings are saved locally on your device, using the platform's standard
+      app storage on iOS and the app's private storage on Android. This data is not transmitted
+      anywhere, we cannot read it, and it is deleted when you delete the app.
     </p>
   </section>
 
@@ -68,12 +69,26 @@
       Google under its own policies.
     </p>
     <p>
-      On iOS, the app asks for your permission before any tracking identifier can be used. If you
-      decline, you will still see ads, but they will be non-personalised. You can change this choice
-      at any time in <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking</strong>.
+      In the European Economic Area, the United Kingdom and Switzerland, the app shows Google's
+      consent form before any ads are requested, on both iOS and Android. You can change your
+      choice at any time from <strong>Settings &rarr; Privacy Options</strong> inside the game.
     </p>
     <p>
-      Buying the "Remove Ads" in-app purchase stops the app from requesting ads at all.
+      <span class="tag">iOS</span> The app also asks for your permission before any tracking
+      identifier can be used. If you decline, you will still see ads, but they will be
+      non-personalised. You can change this choice at any time in
+      <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking</strong>.
+    </p>
+    <p>
+      <span class="tag">Android</span> Ads may use your device's advertising ID. You can reset or
+      delete it in your device settings (on most devices <strong>Settings &rarr; Privacy &rarr;
+      Ads</strong>, or <strong>Settings &rarr; Google &rarr; Ads</strong>). Once deleted, you will
+      still see ads, but they will not be personalised.
+    </p>
+    <p>
+      Buying the "Remove Ads" in-app purchase stops the app from requesting the full-screen ads
+      between levels. Optional rewarded videos, which you can choose to watch for a free life, are
+      only requested when you open a screen that offers one.
     </p>
     <p>
       Google's handling of this data is described in the
@@ -81,28 +96,43 @@
       and the <a href="https://support.google.com/admob/answer/6128543">AdMob policies</a>.
     </p>
 
-    <h3>Apple Game Center (leaderboard)</h3>
+    <h3>Leaderboards (Game Center and Google Play Games)</h3>
     <p>
-      If you are signed in to Game Center, your Endless mode score is submitted to the Ferroll
-      leaderboard so it can be ranked against other players. Game Center is operated by Apple, and
-      the nickname shown on the leaderboard is the one set in your Game Center profile — not
-      something the app creates. You can opt out simply by signing out of Game Center in iOS
-      Settings; the game remains fully playable.
+      If you are signed in to the leaderboard service on your device, your Endless mode score is
+      submitted to the Ferroll leaderboard so it can be ranked against other players. On iOS this is
+      Apple Game Center; on Android it is Google Play Games. The name shown on the leaderboard is the
+      one set in your Game Center or Play Games profile — not something the app creates. You can opt
+      out by signing out of Game Center (iOS Settings) or Google Play Games (the Play Games app); the
+      game remains fully playable.
     </p>
 
-    <h3>Apple in-app purchases</h3>
+    <h3>In-app purchases</h3>
     <p>
-      Purchases are processed entirely by Apple through the App Store. We never receive or store
-      your payment card details, billing address or Apple Account credentials. The app is only told
-      whether a purchase succeeded.
+      Purchases are processed entirely by Apple through the App Store on iOS, and by Google through
+      Google Play Billing on Android. We never receive or store your payment card details, billing
+      address or account credentials. The app is only told whether a purchase succeeded.
     </p>
 
-    <h3>Version check</h3>
+    <h3>Version check (iOS)</h3>
     <p>
-      When the main menu opens, the app asks Apple's public App Store lookup service whether a newer
-      version of Ferroll is available. This request contains only the app's own identifier. No
-      information about you is sent.
+      When the main menu opens, the iOS app asks Apple's public App Store lookup service whether a
+      newer version of Ferroll is available. This request contains only the app's own identifier.
+      No information about you is sent.
     </p>
+  </section>
+
+  <section>
+    <h2>Android permissions</h2>
+    <div class="table-scroll">
+      <table>
+        <tr><th>Permission</th><th>Why the app uses it</th></tr>
+        <tr><td>Internet and network state</td><td>Load ads, process purchases, submit leaderboard scores and detect when you are offline</td></tr>
+        <tr><td>Vibration</td><td>Haptic feedback when the ball hits walls or collects gems (can be turned off in Settings)</td></tr>
+        <tr><td>High sampling rate sensors</td><td>Read the motion sensor fast enough for smooth tilt controls</td></tr>
+        <tr><td>Advertising ID</td><td>Used by Google AdMob to deliver and measure ads, as described above</td></tr>
+      </table>
+    </div>
+    <p>The app never asks for your location, contacts, photos, microphone or camera.</p>
   </section>
 
   <section>
@@ -123,19 +153,21 @@
   <section>
     <h2>Children</h2>
     <p>
-      Ferroll is rated 4+ and contains no chat, no user-generated content and no social features.
-      We do not knowingly collect personal information from children. If you believe a child has
-      provided us with personal information, please contact us and we will act on it.
+      Ferroll contains no chat, no user-generated content and no social features beyond the
+      leaderboards described above. We do not knowingly collect personal information from children.
+      If you believe a child has provided us with personal information, please contact us and we will
+      act on it.
     </p>
   </section>
 
   <section>
     <h2>Your choices</h2>
     <ul>
-      <li>Refuse or withdraw ad tracking permission in <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking</strong>.</li>
-      <li>Reset your advertising identifier in the same Settings section.</li>
-      <li>Sign out of Game Center to stop leaderboard submissions.</li>
-      <li>Buy "Remove Ads" to stop ad requests entirely.</li>
+      <li>Change your ad consent at any time from <strong>Settings &rarr; Privacy Options</strong> in the game (shown where consent is required).</li>
+      <li><span class="tag">iOS</span> Refuse or withdraw tracking permission, or reset your advertising identifier, in <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking</strong>.</li>
+      <li><span class="tag">Android</span> Reset or delete your advertising ID in your device's ad settings.</li>
+      <li>Sign out of Game Center or Google Play Games to stop leaderboard submissions.</li>
+      <li>Buy "Remove Ads" to stop the full-screen ads between levels.</li>
       <li>Delete the app to erase all locally stored game data.</li>
     </ul>
     <p>
@@ -149,7 +181,8 @@
     <h2>Changes to this policy</h2>
     <p>
       If this policy changes, the revised version will be posted on this page with a new "last
-      updated" date. Significant changes will also be noted in the App Store release notes.
+      updated" date. Significant changes will also be noted in the App Store and Google Play release
+      notes.
     </p>
   </section>
 

@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ferroll — Tilt, roll, and escape!</title>
-<meta name="description" content="Ferroll is a tilt-controlled maze game. Roll a steel ball through 42 handcrafted labyrinths, dodge lava traps and teleporting ghosts, collect diamonds and escape before time runs out.">
+<meta name="description" content="Ferroll is a tilt-controlled maze game for iPhone, iPad and Android. Roll an iron ball through 42 levels, dodge ghosts and traps, collect every gem and escape before time runs out.">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="stylesheet" href="assets/style.css">
 <meta property="og:title" content="Ferroll — Tilt, roll, and escape!">
-<meta property="og:description" content="A tilt-controlled maze game for iPhone and iPad. 42 levels, endless mode, and a Game Center leaderboard.">
-<meta property="og:image" content="assets/icon.png">
+<meta property="og:description" content="A tilt-controlled maze game for iPhone, iPad and Android. 42 levels, endless mode and global leaderboards.">
+<meta property="og:image" content="https://ferroll.github.io/assets/screens/01-tilt-roll-escape.jpg">
 <meta property="og:type" content="website">
 </head>
 <body>
@@ -29,51 +29,62 @@
     <img class="logo" src="assets/logo.png" alt="Ferroll logo">
     <h1>Ferroll</h1>
     <p class="tagline">Tilt, roll, and escape!</p>
-    <a class="btn" href="https://apps.apple.com/app/id6759351512">Download on the App Store</a>
+    <div class="stores">
+      <a class="btn" href="https://apps.apple.com/app/id6759351512"><small>Download on the</small>App Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.yagiz.Ferroll"><small>Get it on</small>Google Play</a>
+    </div>
+    <p class="platforms">iPhone and iPad &middot; Android phones and tablets &middot; Free to play</p>
   </header>
 
   <section>
     <h2>About the game</h2>
     <p>
-      Ferroll is a physics-driven maze game built for iPhone and iPad. You never tap to move —
-      you tilt your device, and a steel ball rolls with real momentum. Every wall you clip,
+      Ferroll is a physics-driven maze game for iPhone, iPad and Android. You never tap to move —
+      you tilt your device, and an iron ball rolls with real momentum. Every wall you clip,
       every corner you take too fast, costs you time.
     </p>
     <p>
-      Collect the diamonds scattered through each labyrinth to unlock the exit door, then reach it
-      before the timer runs out. Lava traps open and close on their own rhythm, and ghosts phase
-      through corridors hunting for you. Learn the timing, or get caught.
+      Collect the gems scattered through each labyrinth to unlock the exit door, then reach it
+      before the timer runs out. Traps open and close on their own rhythm, and ghosts patrol the
+      corridors. Learn the timing, or get caught.
     </p>
+
+    <div class="shots">
+      <img src="assets/screens/01-tilt-roll-escape.jpg" alt="Level 10: the iron ball in a red brick maze with blue ghosts and green gems" loading="lazy" width="1280" height="720">
+      <img src="assets/screens/02-dodge-ghosts.jpg" alt="Level 15: ghosts patrolling the corridors around the ball" loading="lazy" width="1280" height="720">
+      <img src="assets/screens/03-collect-gems.jpg" alt="Level 33: purple maze with gems to collect before the exit opens" loading="lazy" width="1280" height="720">
+      <img src="assets/screens/05-endless-mode.jpg" alt="Endless mode, floor 1, with the score counter" loading="lazy" width="1280" height="720">
+    </div>
 
     <div class="features">
       <div class="card">
         <span class="emoji">🎯</span>
         <strong>42 story levels</strong>
-        <p>Five visual worlds, each with its own hazards and pace. Rooms stack up as you progress.</p>
+        <p>Five visual worlds, each with its own walls, ghosts, gems and traps. Mazes grow as you progress.</p>
       </div>
       <div class="card">
         <span class="emoji">♾️</span>
         <strong>Endless mode</strong>
-        <p>Descend as deep as you can into a maze that never stops generating. One life, one run.</p>
+        <p>Descend floor after floor in a maze that never ends. Every gem adds 5 seconds and 50 points.</p>
       </div>
       <div class="card">
         <span class="emoji">🏆</span>
-        <strong>Game Center leaderboard</strong>
-        <p>Your best endless score is submitted automatically. Compare it against players worldwide.</p>
+        <strong>Global leaderboards</strong>
+        <p>Your best endless run goes to Game Center on iPhone and iPad, and to Google Play Games on Android.</p>
       </div>
       <div class="card">
         <span class="emoji">⭐</span>
         <strong>Three-star challenge</strong>
-        <p>Stars depend on how fast you finish and how few times you die. Perfect runs set records.</p>
+        <p>Stars depend on how fast you finish and how few times you die. Flawless runs set best times.</p>
       </div>
       <div class="card">
-        <span class="emoji">👻</span>
-        <strong>Traps and ghosts</strong>
-        <p>Lava pits telegraph before they open, ghosts glow before they charge. Everything is learnable.</p>
+        <span class="emoji">❤️</span>
+        <strong>Lives that refill</strong>
+        <p>Out of lives? You get one back every 20 minutes, up to three. New in version 1.5.</p>
       </div>
       <div class="card">
         <span class="emoji">🌍</span>
-        <strong>16 languages</strong>
+        <strong>14 languages</strong>
         <p>Fully localized, including English, Turkish, Spanish, German, French, Japanese and Chinese.</p>
       </div>
     </div>
@@ -83,12 +94,13 @@
     <h2>Requirements</h2>
     <div class="table-scroll">
       <table>
-        <tr><th>Platform</th><td>iPhone and iPad</td></tr>
-        <tr><th>iOS version</th><td>iOS 17.0 or later</td></tr>
-        <tr><th>Orientation</th><td>Landscape</td></tr>
-        <tr><th>Controls</th><td>Device tilt (accelerometer required)</td></tr>
-        <tr><th>Age rating</th><td>4+</td></tr>
-        <tr><th>Price</th><td>Free, with optional in-app purchases</td></tr>
+        <tr><th></th><th>iPhone and iPad</th><th>Android</th></tr>
+        <tr><th>System</th><td>iOS / iPadOS 17.0 or later</td><td>Android 7.0 or later</td></tr>
+        <tr><th>Devices</th><td>iPhone and iPad</td><td>Phones and tablets</td></tr>
+        <tr><th>Leaderboard</th><td>Game Center</td><td>Google Play Games</td></tr>
+        <tr><th>Orientation</th><td colspan="2">Landscape</td></tr>
+        <tr><th>Controls</th><td colspan="2">Device tilt (motion sensor required)</td></tr>
+        <tr><th>Price</th><td colspan="2">Free, with optional in-app purchases</td></tr>
       </table>
     </div>
   </section>
@@ -97,8 +109,8 @@
     <h2>Need help?</h2>
     <p>
       Stuck on a level, missing a purchase, or found a bug? The
-      <a href="support.html">support page</a> covers the most common questions, and you can always
-      email us directly at <a href="mailto:yagjz@icloud.com">yagjz@icloud.com</a>.
+      <a href="support.html">support page</a> covers the most common questions on both platforms,
+      and you can always email us directly at <a href="mailto:yagjz@icloud.com">yagjz@icloud.com</a>.
     </p>
     <p style="margin-top:22px">
       <a class="btn ghost" href="support.html">Go to Support</a>

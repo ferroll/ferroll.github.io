@@ -268,3 +268,64 @@ footer a { margin-right: 16px; }
     .hero h1 { font-size: 2rem; }
     .nav .wrap { gap: 14px; }
 }
+
+/* --- Mağaza butonları (iOS + Android) --- */
+.stores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.stores .btn { min-width: 220px; }
+
+.stores .btn small {
+    display: block;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.platforms {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin: 16px 0 0;
+}
+
+/* --- Ekran görüntüleri --- */
+.shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.shots img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+/* --- Platform etiketi (SSS içinde) --- */
+.tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--neon);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 6px;
+    margin-right: 4px;
+    vertical-align: 1px;
+}
+
+@media (max-width: 600px) {
+    .stores .btn { min-width: 0; width: 100%; }
+}

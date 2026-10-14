@@ -1,6 +1,6 @@
 # ferroll.github.io
 
-Public website for the iOS game **Ferroll**, hosted with GitHub Pages under the
+Public website for **Ferroll** (iOS and Android), hosted with GitHub Pages under the
 dedicated `ferroll` GitHub account. The game's source code lives in a separate
 private repository.
 
@@ -12,11 +12,11 @@ see below.
 
 ## Pages
 
-| Page | File | Used in App Store Connect as |
-|---|---|---|
-| Landing | `index.html` | Marketing URL |
-| Support | `support.html` | Support URL |
-| Privacy Policy | `privacy.html` | Privacy Policy URL |
+| Page | File | App Store Connect | Google Play Console |
+|---|---|---|---|
+| Landing | `index.html` | Marketing URL | Store settings › Website |
+| Support | `support.html` | Support URL | — |
+| Privacy Policy | `privacy.html` | Privacy Policy URL | App content › Privacy policy |
 
 ## Live URLs
 
@@ -36,8 +36,11 @@ Two things must stay true:
 
 1. The file stays at the **root of this repository**, so it is served from
    `https://ferroll.github.io/app-ads.txt`.
-2. The **Marketing URL in App Store Connect stays on this domain**
-   (`https://ferroll.github.io/`).
+2. The **Marketing URL in App Store Connect** and the **Website in Google Play
+   Console** (Store settings › Store listing contact details) both stay on this
+   domain (`https://ferroll.github.io/`). AdMob checks each store's developer
+   website separately; both apps use the same publisher ID, so this one file
+   covers both.
 
 A GitHub *project* site (`https://<owner>.github.io/<repo>/`) cannot serve a
 file at the domain root, so it can never satisfy the crawler. Note also that
@@ -45,8 +48,9 @@ file at the domain root, so it can never satisfy the crawler. Note also that
 `*.github.io` count as separate root domains — one domain's `app-ads.txt` does
 not cover another.
 
-The publisher ID in the file must match `GADApplicationIdentifier` in the app's
-`Info.plist` (`pub-1265868028154211`).
+The publisher ID in the file must match the AdMob app IDs of both apps
+(`pub-1265868028154211`): `GADApplicationIdentifier` in the iOS `Info.plist` and
+`com.google.android.gms.ads.APPLICATION_ID` in the Android `AndroidManifest.xml`.
 
 ## Enabling GitHub Pages
 
