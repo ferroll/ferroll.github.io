@@ -5,21 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ferroll — Tilt, roll, and escape!</title>
 <meta name="description" content="Ferroll is a tilt-controlled maze game for iPhone, iPad and Android. Roll an iron ball through 42 levels, dodge ghosts and traps, collect every gem and escape before time runs out.">
+<link rel="canonical" href="https://ferroll.github.io/">
+<link rel="alternate" hreflang="en" href="https://ferroll.github.io/">
+<link rel="alternate" hreflang="tr" href="https://ferroll.github.io/tr/">
+<link rel="alternate" hreflang="de" href="https://ferroll.github.io/de/">
+<link rel="alternate" hreflang="es" href="https://ferroll.github.io/es/">
+<link rel="alternate" hreflang="fr" href="https://ferroll.github.io/fr/">
+<link rel="alternate" hreflang="it" href="https://ferroll.github.io/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://ferroll.github.io/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://ferroll.github.io/ru/">
+<link rel="alternate" hreflang="ja" href="https://ferroll.github.io/ja/">
+<link rel="alternate" hreflang="ko" href="https://ferroll.github.io/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://ferroll.github.io/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://ferroll.github.io/zh-hant/">
+<link rel="alternate" hreflang="hi" href="https://ferroll.github.io/hi/">
+<link rel="alternate" hreflang="id" href="https://ferroll.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://ferroll.github.io/vi/">
+<link rel="alternate" hreflang="x-default" href="https://ferroll.github.io/">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css?v=1.5.2">
+<link rel="stylesheet" href="assets/style.css?v=1.5.3">
 <meta property="og:title" content="Ferroll — Tilt, roll, and escape!">
 <meta property="og:description" content="A tilt-controlled maze game for iPhone, iPad and Android. 42 levels, endless mode and global leaderboards.">
 <meta property="og:image" content="https://ferroll.github.io/assets/screens/01-tilt-roll-escape.jpg">
 <meta property="og:type" content="website">
+<script>
+// First visit to the English landing page: send visitors to their browser's language.
+// An explicit choice (stored by the language menu) always wins.
+(function () {
+  var map = {"en": "/", "tr": "/tr/", "de": "/de/", "es": "/es/", "fr": "/fr/", "it": "/it/", "pt-br": "/pt-br/", "ru": "/ru/", "ja": "/ja/", "ko": "/ko/", "zh-hans": "/zh-hans/", "zh-hant": "/zh-hant/", "hi": "/hi/", "id": "/id/", "vi": "/vi/"};
+  try { var saved = localStorage.getItem('ferroll.lang'); if (saved) { if (saved !== 'en' && map[saved]) location.replace(map[saved]); return; } } catch (e) {}
+  if (document.referrer && document.referrer.indexOf(location.host) !== -1) return;
+  var prefs = navigator.languages || [navigator.language || 'en'];
+  for (var i = 0; i < prefs.length; i++) {
+    var l = String(prefs[i]).toLowerCase(), code = null;
+    if (l.indexOf('zh') === 0) code = /(tw|hk|mo|hant)/.test(l) ? 'zh-hant' : 'zh-hans';
+    else if (l.indexOf('pt') === 0) code = 'pt-br';
+    else code = l.split('-')[0];
+    if (code === 'en') return;
+    if (map[code]) { location.replace(map[code]); return; }
+  }
+})();
+</script>
 </head>
 <body>
-
 <nav class="nav">
   <div class="wrap">
     <span class="brand"><img src="assets/icon.png" alt="">Ferroll</span>
     <a href="support.html">Support</a>
     <a href="privacy.html">Privacy</a>
+    <label class="langsel"><span class="sr-only">Language</span>
+      <select id="lang-select" aria-label="Language">
+        <option value="/" data-lang="en" selected>English</option>
+        <option value="/tr/" data-lang="tr">Türkçe</option>
+        <option value="/de/" data-lang="de">Deutsch</option>
+        <option value="/es/" data-lang="es">Español</option>
+        <option value="/fr/" data-lang="fr">Français</option>
+        <option value="/it/" data-lang="it">Italiano</option>
+        <option value="/pt-br/" data-lang="pt-br">Português (Brasil)</option>
+        <option value="/ru/" data-lang="ru">Русский</option>
+        <option value="/ja/" data-lang="ja">日本語</option>
+        <option value="/ko/" data-lang="ko">한국어</option>
+        <option value="/zh-hans/" data-lang="zh-hans">简体中文</option>
+        <option value="/zh-hant/" data-lang="zh-hant">繁體中文</option>
+        <option value="/hi/" data-lang="hi">हिन्दी</option>
+        <option value="/id/" data-lang="id">Bahasa Indonesia</option>
+        <option value="/vi/" data-lang="vi">Tiếng Việt</option>
+      </select>
+    </label>
   </div>
 </nav>
 
@@ -42,14 +95,10 @@
   <section>
     <h2>About the game</h2>
     <p>
-      Ferroll is a physics-driven maze game for iPhone, iPad and Android. You never tap to move —
-      you tilt your device, and an iron ball rolls with real momentum. Every wall you clip,
-      every corner you take too fast, costs you time.
+      Ferroll is a physics-driven maze game for iPhone, iPad and Android. You never tap to move — you tilt your device, and an iron ball rolls with real momentum. Every wall you clip, every corner you take too fast, costs you time.
     </p>
     <p>
-      Collect the gems scattered through each labyrinth to unlock the exit door, then reach it
-      before the timer runs out. Traps open and close on their own rhythm, and ghosts patrol the
-      corridors. Learn the timing, or get caught.
+      Collect the gems scattered through each labyrinth to unlock the exit door, then reach it before the timer runs out. Traps open and close on their own rhythm, and ghosts patrol the corridors. Learn the timing, or get caught.
     </p>
 
     <div class="shots">
@@ -111,9 +160,7 @@
   <section>
     <h2>Need help?</h2>
     <p>
-      Stuck on a level, missing a purchase, or found a bug? The
-      <a href="support.html">support page</a> covers the most common questions on both platforms,
-      and you can always message us on Instagram at <a href="https://www.instagram.com/dev.yagiz/">@dev.yagiz</a>.
+      Stuck on a level, missing a purchase, or found a bug? The <a href="support.html">support page</a> covers the most common questions on both platforms, and you can always message us on Instagram at <a href="https://www.instagram.com/dev.yagiz/">@dev.yagiz</a>.
     </p>
     <p style="margin-top:22px">
       <a class="btn ghost" href="support.html">Go to Support</a>
@@ -124,12 +171,28 @@
 
 <footer>
   <div class="wrap">
-    <a href="index.html">Home</a>
+    <a href="/">Home</a>
     <a href="support.html">Support</a>
     <a href="privacy.html">Privacy Policy</a>
+    <p class="langs"><a href="/" hreflang="en" lang="en" data-lang="en" aria-current="page">English</a> <a href="/tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a> <a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a> <a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a> <a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a> <a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a> <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-br">Português (Brasil)</a> <a href="/ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a> <a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a> <a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a> <a href="/zh-hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-hans">简体中文</a> <a href="/zh-hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-hant">繁體中文</a> <a href="/hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a> <a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a> <a href="/vi/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></p>
     <p style="margin-top:14px">© 2026 Mustafa Yağız. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+// Remember an explicit language choice so the landing page doesn't redirect it away.
+(function () {
+  function remember(l) { try { localStorage.setItem('ferroll.lang', l); } catch (e) {} }
+  var sel = document.getElementById('lang-select');
+  if (sel) sel.addEventListener('change', function () {
+    remember(sel.options[sel.selectedIndex].getAttribute('data-lang'));
+    location.href = sel.value;
+  });
+  document.querySelectorAll('footer .langs a').forEach(function (a) {
+    a.addEventListener('click', function () { remember(a.getAttribute('data-lang')); });
+  });
+})();
+</script>
 
 </body>
 </html>

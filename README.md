@@ -56,15 +56,32 @@ The publisher ID in the file must match the AdMob app IDs of both apps
 
 Settings → Pages → **Source:** Deploy from a branch → **Branch:** `main` / `/ (root)` → Save.
 
+## Languages
+
+The site is available in 15 languages. English lives at the repo root, every
+other language in its own folder (`/tr/`, `/de/`, `/es/`, `/fr/`, `/it/`,
+`/pt-br/`, `/ru/`, `/ja/`, `/ko/`, `/zh-hans/`, `/zh-hant/`, `/hi/`, `/id/`, `/vi/`).
+The root URLs never move, so the store consoles and `app-ads.txt` are unaffected.
+
+Every page carries `hreflang` links to its translations. On a first visit to
+`/`, a small script sends the visitor to their browser's language; once someone
+picks a language from the menu, that choice is remembered and wins.
+
 ## Editing
 
-Plain HTML and one CSS file, no build step. Edit, commit, push — Pages
-redeploys automatically. Colors match Ferroll's in-app theme:
+The HTML pages are generated — don't edit them by hand. Change the text in
+`tools/strings/<language>.py` (English is `en.py`), then run:
+
+    python3 tools/check_strings.py   # every translation matches en.py's shape and placeholders
+    python3 tools/build.py           # rewrites all 45 pages
+
+and commit the result. Pages redeploy automatically. Colors match Ferroll's
+in-app theme:
 
 - Neon blue `#00ccff`
 - Dark background `#0d0d14`
 
 ## Updating the contact address
 
-The Instagram contact `@dev.yagiz` (https://www.instagram.com/dev.yagiz/) appears in `index.html`, `support.html` and
-`privacy.html`. Change it in all three if it ever moves.
+The Instagram contact `@dev.yagiz` is set once as `IG_URL` in `tools/build.py`;
+change it there and rebuild if it ever moves.
